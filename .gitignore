@@ -78,3 +78,30 @@ local_settings.py
 
 # Ignore pipenv and other package management files
 Pipfile.lock
+
+# Python
+*.py[cod]
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist
+build
+
+# Django
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+*.env
+
+# Static and media
+/staticfiles
+/media
+
+# pipenv
+Pipfile
+Pipfile.lock
+
+# Virtualenv
+venv/
