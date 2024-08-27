@@ -1,0 +1,80 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.pyo
+*.pyd
+*.pyo
+*.pyd
+media/
+staticfiles/
+
+# If you're using Django's staticfile handling system, 
+# you might also want to include this:
+static/
+
+# Ignore the node_modules directory, if you have a frontend project in the same repo
+node_modules/
+
+# If you are using MySQL, SQLite, or other databases, you might want to ignore the files created by them:
+*.db
+*.sqlite3
+
+# Ignore the Django secret key file if you have one.
+secret_key.txt
+
+# Ignore the virtual environment directory
+venv/
+ENV/
+env/
+
+# Ignore .env files, which usually contain environment-specific settings
+.env
+
+# Ignore local settings file
+local_settings.py
+
+# Ignore VSCode settings
+.vscode/
+
+# Ignore MacOS system files
+.DS_Store
+
+# Ignore thumbnails created by Pillow
+*.thumb
+
+# Ignore IDE project files
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore pipenv and other package management files
+Pipfile.lock
