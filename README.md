@@ -40,7 +40,11 @@ panel administrador:
 http://127.0.0.1:8000/admin/
 ```
 
+    # To create an API, we often need to serialize our models.
+    # Serialization involves converting Django model instances or QuerySets
+    # into JSON or other formats that can be sent over the web. 
+    # This is typically handled by Django REST Framework serializers, 
+    # which need to be defined separately.
 
-
-[Django Rest Framework](https://www.django-rest-framework.org/#installation)
-[django-cors-headers](https://pypi.org/project/django-cors-headers/)
+- [Django Rest Framework](https://www.django-rest-framework.org/#installation)
+- [Django Cors Headers](https://pypi.org/project/django-cors-headers/)
