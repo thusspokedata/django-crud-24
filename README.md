@@ -32,7 +32,11 @@ python manage.py makemigrations tasks
 # Apply the migrations for the 'tasks' app to update the database schema.
 python manage.py migrate tasks
 
-python manage.py createsuperuser 
+# Create a superuser account for accessing the Django admin interface.
+python manage.py createsuperuser
+
+# Install CoreAPI, which is used for generating and interacting with APIs in Django.
+pip install coreapi
 ```
 
 panel administrador:
@@ -40,7 +44,12 @@ panel administrador:
 http://127.0.0.1:8000/admin/
 ```
 
+    # To create an API, we often need to serialize our models.
+    # Serialization involves converting Django model instances or QuerySets
+    # into JSON or other formats that can be sent over the web. 
+    # This is typically handled by Django REST Framework serializers, 
+    # which need to be defined separately.
 
-
-[Django Rest Framework](https://www.django-rest-framework.org/#installation)
-[django-cors-headers](https://pypi.org/project/django-cors-headers/)
+- [Django Rest Framework](https://www.django-rest-framework.org/#installation)
+- [Django Cors Headers](https://pypi.org/project/django-cors-headers/)
+- [Continuing to use CoreAPI](https://www.django-rest-framework.org/community/3.10-announcement/)
