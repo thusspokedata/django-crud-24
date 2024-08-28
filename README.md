@@ -32,7 +32,11 @@ python manage.py makemigrations tasks
 # Apply the migrations for the 'tasks' app to update the database schema.
 python manage.py migrate tasks
 
-python manage.py createsuperuser 
+# Create a superuser account for accessing the Django admin interface.
+python manage.py createsuperuser
+
+# Install CoreAPI, which is used for generating and interacting with APIs in Django.
+pip install coreapi
 ```
 
 panel administrador:
