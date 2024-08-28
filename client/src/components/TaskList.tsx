@@ -3,11 +3,11 @@ import { getAllTasks } from '../api/tasks.api';
 import { TaskCard } from '.';
 
 export interface Task {
-  id: number;
+  id?: number;
   title: string;
   description: string;
-  completed: boolean;
-  created_at: string;
+  completed?: boolean;
+  created_at?: string;
 }
 
 export function TaskList() {

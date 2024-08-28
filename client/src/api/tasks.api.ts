@@ -1,5 +1,9 @@
 import axios from 'axios';
+import { Task } from '../components';
 
-export const getAllTasks = () => {
-  return axios.get('http://localhost:8000/api/v1/tasks/');
-};
+const api = axios.create({
+  baseURL: 'http://localhost:8000',
+});
+
+export const getAllTasks = () => api.get('/api/v1/tasks/');
+export const createTask = (data: Task) => api.post('/api/v1/tasks/', data);
