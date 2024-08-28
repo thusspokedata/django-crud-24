@@ -48,3 +48,4 @@ http://127.0.0.1:8000/admin/
 
 - [Django Rest Framework](https://www.django-rest-framework.org/#installation)
 - [Django Cors Headers](https://pypi.org/project/django-cors-headers/)
+- [Continuing to use CoreAPI](https://www.django-rest-framework.org/community/3.10-announcement/)
