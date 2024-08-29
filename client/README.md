@@ -1,1 +1,3 @@
-http://localhost:5000/watch?v=38XWpyEK8IY 53:33
+React Hooks that im using:
+
+useNavigate, useParams
