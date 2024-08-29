@@ -1,22 +1,44 @@
 import { useForm } from 'react-hook-form';
-import { createTask, deleteTask } from '../api/tasks.api';
+import { createTask, deleteTask, getTask, updateTask } from '../api/tasks.api';
 import { Button, Input, Separator, Task, Textarea } from '../components';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export function TaskFormPage() {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<Task>();
   const navigate = useNavigate();
   const params = useParams();
 
+  useEffect(() => {
+    async function fetchTask() {
+      if (params.id) {
+        const {
+          data: { title, description },
+        } = await getTask(+params.id);
+
+        setValue('title', title);
+        setValue('description', description);
+      }
+    }
+    fetchTask();
+  }, [params.id]);
+
   const onSubmit = handleSubmit(async (data) => {
     try {
-      await createTask(data);
+      if (params.id) {
+        await updateTask(+params.id, data);
+        console.log('Task updated successfully!');
+      }
+      if (!params.id) {
+        await createTask(data);
+        console.log('Task created successfully!');
+      }
       navigate('/tasks');
-      console.log('Task created successfully!');
     } catch (error) {
       console.error('Failed to create task:', error);
     }
@@ -42,14 +64,14 @@ export function TaskFormPage() {
             type="text"
             placeholder="Title"
             {...register('title', { required: true })}
-          />{' '}
+          />
           {errors.title && <span>Title is required</span>}
           <br />
           <Textarea
             rows={3}
             placeholder="Description"
             {...register('description', { required: true })}
-          />{' '}
+          />
           {errors.description && <span>Description is required</span>}
           <br />
           <Button
@@ -57,7 +79,7 @@ export function TaskFormPage() {
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mb-2"
             type="submit"
           >
-            Create Task!
+            {!params.id ? 'Create Task!' : 'Update Task!'}
           </Button>
         </form>
         {params.id && (

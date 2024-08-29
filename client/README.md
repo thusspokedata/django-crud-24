@@ -1,3 +1,3 @@
 React Hooks that im using:
 
-useNavigate, useParams
+useNavigate, useParams, useEffect, useState
