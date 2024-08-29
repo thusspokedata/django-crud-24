@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { createTask, deleteTask, getTask, updateTask } from '../api/tasks.api';
-import { Button, Input, Separator, Task, Textarea } from '../components';
+import { Button, Input, Task, Textarea } from '../components';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
@@ -56,7 +56,7 @@ export function TaskFormPage() {
 
   return (
     <>
-      <Separator />
+      <div className="text-2xl text-cyan-600 mt-2 ml-10">Create a Task</div>
       <div className="w-1/2 ml-10 mt-10">
         <form onSubmit={onSubmit}>
           <Input

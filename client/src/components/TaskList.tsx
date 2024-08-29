@@ -27,7 +27,11 @@ export function TaskList() {
   }, []);
 
   return tasks.length > 0 ? (
-    tasks.map((task) => <TaskCard key={task.id} {...task} />)
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ml-10">
+      {tasks.map((task) => (
+        <TaskCard key={task.id} {...task} />
+      ))}
+    </div>
   ) : (
     <div>No Tasks</div>
   );

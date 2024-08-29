@@ -13,7 +13,7 @@ export function TaskCard(task: Task) {
   const navigate = useNavigate();
   return (
     <Card
-      className="w-1/5 my-5 ml-5 bg-slate-300"
+      className="w-4/5 my-5  bg-slate-300"
       onClick={() => {
         navigate(`/task/${task.id}`);
       }}
