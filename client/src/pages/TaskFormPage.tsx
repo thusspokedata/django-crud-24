@@ -26,7 +26,7 @@ export function TaskFormPage() {
       }
     }
     fetchTask();
-  }, [params.id]);
+  }, [params.id, setValue]);
 
   const onSubmit = handleSubmit(async (data) => {
     try {
