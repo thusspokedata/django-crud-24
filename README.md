@@ -1,3 +1,15 @@
+
+This repository was created for practice purposes. It utilizes Python and Django for the backend, and TypeScript, React, Tailwind, Shadcn, and React Hook Form for the frontend.
+
+Technologies Used
+
+	•	Backend: Python, Django
+	•	Frontend: TypeScript, React, Tailwind CSS, Shadcn, React Hook Form
+
+
+
+-------
+
 ```py
 # Create a virtual environment named 'venv' to isolate project dependencies.
 python -m venv venv
